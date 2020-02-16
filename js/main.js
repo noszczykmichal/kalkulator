@@ -1,5 +1,6 @@
 "use strict";
 
+//pobranie wszystkich przycisków
 let display=document.getElementById('display');
 let button9=document.getElementById('button9');
 let button8=document.getElementById('button8');
@@ -18,7 +19,86 @@ let buttonMinus=document.getElementById('buttonMinus');
 let buttonMultiply=document.getElementById('buttonMultiply');
 let buttonDivide=document.getElementById('buttonDivide')
 let buttonDot=document.getElementById('buttonDot');
-let buttonEquals=document.getElementById('');
+let buttonEquals=document.getElementById('buttonEquals');
+let currentlyDisplayed=display.innerText;
+
+//funkcję obsługujące wyświetlanie kolejnych przycicków na ekranie kalkulatora
+
+function calButton9(){
+    let contentButton9=button9.innerText;
+    currentlyDisplayed=display.innerText;
+    display.innerText=currentlyDisplayed+contentButton9;
+}
+
+function calButton8(){
+    let contentButton8=button8.innerText;
+    currentlyDisplayed=display.innerText;
+    display.innerText=currentlyDisplayed+contentButton8;
+}
+
+function calButton7(){
+    let contentButton7=button7.innerText;
+    currentlyDisplayed=display.innerText;
+    display.innerText=currentlyDisplayed+contentButton7;
+}
+
+function calButton6(){
+    let contentButton6=button6.innerText;
+    currentlyDisplayed=display.innerText;
+    display.innerText=currentlyDisplayed+contentButton6;
+}
+
+function calButton5(){
+    let contentButton5=button5.innerText;
+    currentlyDisplayed=display.innerText;
+    display.innerText=currentlyDisplayed+contentButton5;
+}
+
+function calButton4(){
+    let contentButton4=button4.innerText;
+    currentlyDisplayed=display.innerText;
+    display.innerText=currentlyDisplayed+contentButton4;
+}
+
+function calButton3(){
+    let contentButton3=button3.innerText;
+    currentlyDisplayed=display.innerText;
+    display.innerText=currentlyDisplayed+contentButton3;
+}
+
+function calButton2(){
+    let contentButton2=button2.innerText;
+    currentlyDisplayed=display.innerText;
+    display.innerText=currentlyDisplayed+contentButton2;
+}
+
+function calButton1(){
+    let contentButton1=button1.innerText;
+    currentlyDisplayed=display.innerText;
+    display.innerText=currentlyDisplayed+contentButton1;
+}
+
+function calButton0(){
+    let contentButton0=button0.innerText;
+    currentlyDisplayed=display.innerText;
+    display.innerText=currentlyDisplayed+contentButton0;
+}
+
+
+
+//addEventy dla każdego przycisku
+
+button9.addEventListener('click', calButton9);
+button8.addEventListener('click', calButton8);
+button7.addEventListener('click', calButton7);
+button6.addEventListener('click', calButton6);
+button5.addEventListener('click', calButton5);
+button4.addEventListener('click', calButton4);
+button3.addEventListener('click', calButton3);
+button2.addEventListener('click', calButton2);
+button1.addEventListener('click', calButton1);
+button0.addEventListener('click', calButton0);
+
 
 
 
