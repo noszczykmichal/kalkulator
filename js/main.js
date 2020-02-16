@@ -22,7 +22,7 @@ let buttonDot=document.getElementById('buttonDot');
 let buttonEquals=document.getElementById('buttonEquals');
 let currentlyDisplayed=display.innerText;
 
-//funkcję obsługujące wyświetlanie kolejnych przycicków na ekranie kalkulatora
+//funkcje obsługujące wyświetlanie kolejnych przycicków na ekranie kalkulatora
 
 function calButton9(){
     let contentButton9=button9.innerText;
@@ -84,7 +84,49 @@ function calButton0(){
     display.innerText=currentlyDisplayed+contentButton0;
 }
 
+//funkcje obsługujące znaki specialne
 
+function calButtonDel(){
+    let contentDel=display.innerText;
+    let newContent=contentDel.slice(0,-1);
+    display.innerText=newContent;
+}
+
+function calButtonPercent(){
+    let contentBtnPercent=buttonPercent.innerText;
+    currentlyDisplayed=display.innerText;
+    display.innerText=currentlyDisplayed+contentBtnPercent;
+}
+
+function calButtonPlus(){
+    let contentButtonPlus=buttonPlus.innerText;
+    currentlyDisplayed=display.innerText;
+    display.innerText=currentlyDisplayed+contentButtonPlus;
+}
+
+function calButtonMinus(){
+    let contentButtonMinus=buttonMinus.innerText;
+    currentlyDisplayed=display.innerText;
+    display.innerText=currentlyDisplayed+contentButtonMinus;
+}
+
+function calButtonMultiply(){
+    let contentButtonMultiply=buttonMultiply.innerText;
+    currentlyDisplayed=display.innerText;
+    display.innerText=currentlyDisplayed+contentButtonMultiply;
+}
+
+function calButtonDivide(){
+    let contentButtonDivide=buttonDivide.innerText;
+    currentlyDisplayed=display.innerText;
+    display.innerText=currentlyDisplayed+contentButtonDivide;
+}
+
+function calButtonDot(){
+    let contentButtonDot=buttonDot.innerText;
+    currentlyDisplayed=display.innerText;
+    display.innerText=currentlyDisplayed+contentButtonDot;
+}
 
 //addEventy dla każdego przycisku
 
@@ -99,7 +141,14 @@ button2.addEventListener('click', calButton2);
 button1.addEventListener('click', calButton1);
 button0.addEventListener('click', calButton0);
 
+//znaki specjalne
 
-
+buttonDel.addEventListener('click', calButtonDel);
+buttonPercent.addEventListener('click', calButtonPercent);
+buttonPlus.addEventListener('click', calButtonPlus);
+buttonMinus.addEventListener('click', calButtonMinus);
+buttonMultiply.addEventListener('click', calButtonMultiply);
+buttonDivide.addEventListener('click', calButtonDivide);
+buttonDot.addEventListener('click', calButtonDot);
 
 
