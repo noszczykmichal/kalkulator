@@ -151,4 +151,26 @@ buttonMultiply.addEventListener('click', calButtonMultiply);
 buttonDivide.addEventListener('click', calButtonDivide);
 buttonDot.addEventListener('click', calButtonDot);
 
+//funkcja licząca
 
+function calculate(){
+    let contentDisplay=display.innerText;
+    let arrDisplay=contentDisplay.split('');
+    let newDisplay=[];
+    //po wciśnięciu przycicku '=' w tele odpalana jest pętla po to żeby wyciąć wszystkie pojawiające się znaki 'x' i zastąpić je właściwym operatorem mnożenia
+    for(let i=0; i<arrDisplay.length; i++){
+        if(arrDisplay[i]!== 'x'){
+            newDisplay.push(arrDisplay[i])
+        } else{newDisplay.push('*')}
+    }
+    // console.log('nowa:', newDisplay);
+    let newDisplayTostring= newDisplay.join('');
+    
+    let calculateAll=eval(newDisplayTostring);
+    
+    display.innerText=calculateAll;
+}
+
+
+
+buttonEquals.addEventListener('click', calculate)
