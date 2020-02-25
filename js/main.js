@@ -37,9 +37,8 @@ function calculate(){
     }
     // console.log('nowa:', newDisplay);
     let newDisplayTostring= newDisplay.join("");
-    
     let calculateAll=eval(newDisplayTostring);
-    
+
     display.innerText=calculateAll;
 }
 
